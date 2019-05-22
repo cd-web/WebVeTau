@@ -15,6 +15,8 @@ birthday date,
 cmnd char(9),
 phone char(10),
 [address] nvarchar(50),
-email varchar(50)
+email varchar(50),
+role_id varchar(20),
+Foreign Key (role_id) REFERENCES [role](id)
 );
 go

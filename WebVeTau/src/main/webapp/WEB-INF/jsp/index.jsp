@@ -9,11 +9,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>index</title>
+<title>Web vé tàu</title>
 </head>
 
 <body>
-	<h1>Hello spring boot</h1>
+	<div>
+
+	</div>
+	<script src=""></script>
 </body>
 
 </html>

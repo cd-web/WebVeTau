@@ -38,12 +38,32 @@ public class Account {
 	@Column(name = "email")
 	private String email;
 	
+	@Column(name = "nha_xe")
+	private String nhaXe;
+	
+	@Column(name = "role_id")
+	private String roleId;
+	
 	public Account() {
-		// TODO Auto-generated constructor stub
+		
+	}
+	
+	public Account(String name, boolean gender, Date birthday, String cmnd, String phone, String address, String email,
+			String nhaXe, String roleId) {
+		super();
+		this.name = name;
+		this.gender = gender;
+		this.birthday = birthday;
+		this.cmnd = cmnd;
+		this.phone = phone;
+		this.address = address;
+		this.email = email;
+		this.nhaXe = nhaXe;
+		this.roleId = roleId;
 	}
 
 	public Account(int accountId, String name, boolean gender, Date birthday, String cmnd, String phone, String address,
-			String email) {
+			String email, String nhaXe, String roleId) {
 		super();
 		this.accountId = accountId;
 		this.name = name;
@@ -53,7 +73,10 @@ public class Account {
 		this.phone = phone;
 		this.address = address;
 		this.email = email;
+		this.nhaXe = nhaXe;
+		this.roleId = roleId;
 	}
+
 
 	public int getAccountId() {
 		return accountId;
@@ -118,7 +141,22 @@ public class Account {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	
-	
 
+	public String getNhaXe() {
+		return nhaXe;
+	}
+
+	public void setNhaXe(String nhaXe) {
+		this.nhaXe = nhaXe;
+	}
+
+	public String getRoleId() {
+		return roleId;
+	}
+
+	public void setRoleId(String roleId) {
+		this.roleId = roleId;
+	}
+
+	
 }
