@@ -17,14 +17,14 @@ public class Account {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int accountId;
 	
-	@Column(name = "name")
-	private String name;
+	@Column(name = "ten")
+	private String ten;
 	
-	@Column(name = "gender")
-	private boolean gender;
+	@Column(name = "gioi_tinh")
+	private boolean gioiTinh;
 	
-	@Column(name = "brithday")
-	private Date birthday;
+	@Column(name = "ngay_sinh")
+	private Date ngaySinh;
 	
 	@Column(name = "cmnd")
 	private String cmnd;
@@ -32,50 +32,66 @@ public class Account {
 	@Column(name = "phone")
 	private String phone;
 	
-	@Column(name = "address")
-	private String address;
+	@Column(name = "dia_chi")
+	private String diaChi;
 	
 	@Column(name = "email")
 	private String email;
 	
-	@Column(name = "nha_xe")
-	private String nhaXe;
+	@Column(name = "nha_xe_id")
+	private int nhaXeId;
 	
 	@Column(name = "role_id")
 	private String roleId;
+	
+	@Column(name = "ten_dang_nhap")
+	private String tenDangNhap;
+	
+	@Column(name = "mat_khau")
+	private String matKhau;
 	
 	public Account() {
 		
 	}
 	
-	public Account(String name, boolean gender, Date birthday, String cmnd, String phone, String address, String email,
-			String nhaXe, String roleId) {
+	
+
+	public Account(String ten, boolean gioiTinh, Date ngaySinh, String cmnd, String phone, String diaChi, String email,
+			int nhaXeId, String roleId, String tenDangNhap, String matKhau) {
 		super();
-		this.name = name;
-		this.gender = gender;
-		this.birthday = birthday;
+		this.ten = ten;
+		this.gioiTinh = gioiTinh;
+		this.ngaySinh = ngaySinh;
 		this.cmnd = cmnd;
 		this.phone = phone;
-		this.address = address;
+		this.diaChi = diaChi;
 		this.email = email;
-		this.nhaXe = nhaXe;
+		this.nhaXeId = nhaXeId;
 		this.roleId = roleId;
+		this.tenDangNhap = tenDangNhap;
+		this.matKhau = matKhau;
 	}
+	
 
-	public Account(int accountId, String name, boolean gender, Date birthday, String cmnd, String phone, String address,
-			String email, String nhaXe, String roleId) {
+
+
+	public Account(int accountId, String ten, boolean gioiTinh, Date ngaySinh, String cmnd, String phone, String diaChi,
+			String email, int nhaXeId, String roleId, String tenDangNhap, String matKhau) {
 		super();
 		this.accountId = accountId;
-		this.name = name;
-		this.gender = gender;
-		this.birthday = birthday;
+		this.ten = ten;
+		this.gioiTinh = gioiTinh;
+		this.ngaySinh = ngaySinh;
 		this.cmnd = cmnd;
 		this.phone = phone;
-		this.address = address;
+		this.diaChi = diaChi;
 		this.email = email;
-		this.nhaXe = nhaXe;
+		this.nhaXeId = nhaXeId;
 		this.roleId = roleId;
+		this.tenDangNhap = tenDangNhap;
+		this.matKhau = matKhau;
 	}
+
 
 
 	public int getAccountId() {
@@ -86,28 +102,28 @@ public class Account {
 		this.accountId = accountId;
 	}
 
-	public String getName() {
-		return name;
+	public String getTen() {
+		return ten;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setTen(String ten) {
+		this.ten = ten;
 	}
 
-	public boolean isGender() {
-		return gender;
+	public boolean isGioiTinh() {
+		return gioiTinh;
 	}
 
-	public void setGender(boolean gender) {
-		this.gender = gender;
+	public void setGioiTinh(boolean gioiTinh) {
+		this.gioiTinh = gioiTinh;
 	}
 
-	public Date getBirthday() {
-		return birthday;
+	public Date getNgaySinh() {
+		return ngaySinh;
 	}
 
-	public void setBirthday(Date birthday) {
-		this.birthday = birthday;
+	public void setNgaySinh(Date ngaySinh) {
+		this.ngaySinh = ngaySinh;
 	}
 
 	public String getCmnd() {
@@ -126,12 +142,12 @@ public class Account {
 		this.phone = phone;
 	}
 
-	public String getAddress() {
-		return address;
+	public String getDiaChi() {
+		return diaChi;
 	}
 
-	public void setAddress(String address) {
-		this.address = address;
+	public void setDiaChi(String diaChi) {
+		this.diaChi = diaChi;
 	}
 
 	public String getEmail() {
@@ -142,12 +158,12 @@ public class Account {
 		this.email = email;
 	}
 
-	public String getNhaXe() {
-		return nhaXe;
+	public int getNhaXeId() {
+		return nhaXeId;
 	}
 
-	public void setNhaXe(String nhaXe) {
-		this.nhaXe = nhaXe;
+	public void setNhaXeId(int nhaXeId) {
+		this.nhaXeId = nhaXeId;
 	}
 
 	public String getRoleId() {
@@ -158,5 +174,22 @@ public class Account {
 		this.roleId = roleId;
 	}
 
+	public String getTenDangNhap() {
+		return tenDangNhap;
+	}
+
+	public void setTenDangNhap(String tenDangNhap) {
+		this.tenDangNhap = tenDangNhap;
+	}
+
+	public String getMatKhau() {
+		return matKhau;
+	}
+
+	public void setMatKhau(String matKhau) {
+		this.matKhau = matKhau;
+	}
+	
+	
 	
 }
